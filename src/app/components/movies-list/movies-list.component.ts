@@ -11,6 +11,8 @@ import {MovieService} from "../../services/movie.service";
 export class MoviesListComponent {
   post$ : Observable<Movie[]>
 
+  selectedMovie: Movie
+
   constructor(private movieService: MovieService) {
     this.post$ = this.movieService.getMovies()
   }
@@ -20,5 +22,7 @@ export class MoviesListComponent {
       `Title: ${movie.Title}\nYear: ${movie.Year}\nGenre: ${movie.Genre}\nActors: ${movie.Actors}\nPlot: ${movie.Plot}\nPoster: ${movie.Poster}`
     )
   }
-
+  setSelected(movie: Movie){
+    this.selectedMovie=movie
+}
 }

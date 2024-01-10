@@ -1,6 +1,13 @@
 .lista {
   margin-left: 50px;
   font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
 }
 
 li {
@@ -11,5 +18,9 @@ li {
 li:hover {
   color: blue;
   cursor: pointer;
+}
+.selected{
+  color: blue;
+  font-weight: bold;
 }
 

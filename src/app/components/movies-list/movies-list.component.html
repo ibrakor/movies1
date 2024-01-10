@@ -1,10 +1,16 @@
 <div class="lista">
-<section *ngIf="post$ | async as movies">
-  <h1>Movie list</h1>
-  <ul>
-    <li *ngFor="let movie of movies" (click)="showInfo(movie)">
-      {{movie.Title}} {{movie.Year}}
-    </li>
-  </ul>
-</section>
+  <section *ngIf="post$ | async as movies">
+    <h1>Movie list</h1>
+    <div class="lista">
+      <ul >
+        <li *ngFor="let movie of movies"  (dblclick)="setSelected(movie)"
+            [ngClass]="{'selected': movie === selectedMovie}"
+        >
+          {{movie.Title}} {{movie.Year}}
+        </li>
+      </ul>
+    </div>
+  </section>
+  <app-movie-post [movie]="selectedMovie"></app-movie-post>
+  <app-movie-plot [movie]="selectedMovie"></app-movie-plot>
 </div>
