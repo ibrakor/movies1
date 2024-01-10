@@ -1,0 +1,15 @@
+.lista {
+  margin-left: 50px;
+  font-size: 22px;
+}
+
+li {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+li:hover {
+  color: blue;
+  cursor: pointer;
+}
+

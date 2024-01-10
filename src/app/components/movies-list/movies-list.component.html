@@ -1,0 +1,10 @@
+<div class="lista">
+<section *ngIf="post$ | async as movies">
+  <h1>Movie list</h1>
+  <ul>
+    <li *ngFor="let movie of movies" (click)="showInfo(movie)">
+      {{movie.Title}} {{movie.Year}}
+    </li>
+  </ul>
+</section>
+</div>
