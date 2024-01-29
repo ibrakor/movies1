@@ -14,4 +14,9 @@ export class MovieService {
   getMovies(): Observable<Movie[]>{
     return of(MOVIES)
   }
+
+  getMovieByName(name: string): Observable<Movie | undefined> {
+    name = name.toLowerCase();
+    return of(MOVIES.find(movie => movie.Title.toLowerCase() === name));
+  }
 }

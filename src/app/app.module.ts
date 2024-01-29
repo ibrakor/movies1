@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MoviePostComponent } from './components/movie-post/movie-post.component';
 import { MoviePlotComponent } from './components/movie-plot/movie-plot.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MoviePlotComponent } from './components/movie-plot/movie-plot.component
     HeaderComponent,
     FooterComponent,
     MoviePostComponent,
-    MoviePlotComponent
+    MoviePlotComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

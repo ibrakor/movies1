@@ -6,8 +6,9 @@
         <li *ngFor="let movie of movies"  (dblclick)="setSelected(movie)"
             [ngClass]="{'selected': movie === selectedMovie}"
         >
-          {{movie.Title}} {{movie.Year}}
+          {{movie.Title}} {{movie.Year}} <button routerLink="/detail/{{movie.Title}}">Detalle</button>
         </li>
+
       </ul>
     </div>
   </section>
